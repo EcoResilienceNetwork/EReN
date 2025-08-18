@@ -1,0 +1,253 @@
+/* Base + Fonts */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #223;
+  background: #f5fdf5;
+}
+
+/* Headings with serif for contrast */
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  margin-top: 0.2em;
+  color: #0a3d2e;
+}
+
+/* NAVBAR */
+nav {
+  position: sticky; /* stays on top when scrolling */
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #006644;
+  padding: 12px 20px;
+}
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  position: relative;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  display: block;
+  border-radius: 4px;
+}
+nav a:hover {
+  background: #009966;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #006644;
+  min-width: 190px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.dropdown-content li a:hover {
+  background: #004d26;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* HERO (Home) */
+header.hero {
+  padding: 90px 20px;
+  color: #ffffff;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+              url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80');
+  /* If you prefer a local image instead, comment the line above and use this:
+     background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/home-bg.jpg");
+  */
+  background-size: cover;
+  background-position: center;
+}
+.hero h1 {
+  font-size: 38px;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+
+}
+.hero p {
+  font-size: 18px;
+  margin: 18px 0 28px;
+  color: #ffffff !important;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+.btn {
+  display: inline-block;
+  background: #00a86b;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #004d26;
+}
+
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Gallery (Home) */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0 5px;
+}
+.gallery-grid img {
+  width: 320px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Officials */
+.officials-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.official-card {
+  text-align: center;
+  max-width: 220px;
+}
+.official-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #006644;
+  margin-bottom: 10px;
+}
+.official-card h3 {
+  margin: 6px 0 4px;
+}
+.official-card p {
+  margin: 0;
+  color: #456;
+}
+
+/* Projects */
+.project-card {
+  display: block;                  /* stack everything */
+  margin-bottom: 32px;
+  background: #fff;
+  border: 1px solid #e4eee8;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08); /* subtle depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;                      /* responsive */
+  max-width: 420px;                 /* keeps them from stretching too big */
+  margin: 0 auto 15px auto;         /* centered + spacing */
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card img:hover {
+  transform: scale(1.02);           /* slight zoom effect */
+}
+
+.project-info h2 {
+  margin-top: 0;
+  color: #1a73e8;                   /* bright blue */
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.project-info h2:hover {
+  color: #2ecc71;                   /* green on hover */
+}
+
+.project-info p {
+  line-height: 1.6;
+  color: #333;
+}
+
+details {
+  background: #f1fbf5;
+  border: 1px solid #d6efe1;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+
+/* Contact */
+.contact-card {
+  background: #fff;
+  border: 1px solid #e4eee8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background: #004d26;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
+}
+footer .social-links a {
+  color: #00ffcc;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 700;
+}
+footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweaks */
+@media (max-width: 760px) {
+  .project-card { flex-direction: column; }
+  nav ul { gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+}
