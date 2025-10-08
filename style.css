@@ -218,7 +218,17 @@ details {
   font-size: 0.95rem;
   color: #444;
 }
+/* Side-by-side images inside project cards */
+.project-images {
+  display: flex;
+  gap: 10px;        /* space between images */
+  margin-bottom: 15px;
+}
 
+.project-images img {
+  width: 32%;       /* 3 images fit in one row */
+  margin: 0;        /* overrides auto-centering from .project-card img */
+}
 
 /* Contact */
 .contact-card {
@@ -251,3 +261,4 @@ footer .social-links a:hover {
   .project-card { flex-direction: column; }
   nav ul { gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 }
+
