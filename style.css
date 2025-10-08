@@ -221,13 +221,15 @@ details {
 /* Side-by-side images inside project cards */
 .project-images {
   display: flex;
-  gap: 10px;        /* space between images */
+  gap: 10px;          /* space between images */
   margin-bottom: 15px;
+  justify-content: center; /* keep them centered */
 }
 
 .project-images img {
-  width: 32%;       /* 3 images fit in one row */
-  margin: 0;        /* overrides auto-centering from .project-card img */
+  width: 25%;         /* reduced from 32% → smaller images */
+  margin: 0;
+  border-radius: 6px; /* optional: slightly rounded corners */
 }
 
 /* Contact */
@@ -261,4 +263,5 @@ footer .social-links a:hover {
   .project-card { flex-direction: column; }
   nav ul { gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 }
+
 
